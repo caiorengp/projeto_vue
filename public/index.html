@@ -20,31 +20,8 @@
   </noscript>
 
   <div id="app">
-    <form @submit.prevent="submitForm">
-      <input type="text" v-model="input_name" placeholder="Digite seu nome" />
-      <input type="submit" value="Enviar" />
-    </form>
-
-    <p>O meu nome é: {{ name }}</p>
-    
+   
   </div>
 
-  <script>
-    const { createApp } = Vue;
-
-    createApp({
-      data() {
-        return {
-          input_name: '',
-          name: ''
-        };
-      },
-      methods: {
-        submitForm() {
-          this.name = this.input_name;
-        }
-      }
-    }).mount('#app');
-  </script>
 </body>
 </html>
